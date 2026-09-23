@@ -9,6 +9,7 @@ export interface Service {
   benefits: string[];
   whoFor: string[];
   duration: string;
+  image: string;
   seo: {
     title: string;
     description: string;
@@ -27,331 +28,325 @@ export const services: Service[] = [
     slug: "klasik-masaj",
     name: "Klasik Masaj",
     shortName: "Klasik",
+    image: "/images/klasik-masaj.webp",
     tagline: "Günün yorgunluğunu atmak için en kadim yöntem",
     shortDescription:
-      "Tüm vücudu kapsayan, kas gevşemesini ve kan dolaşımını desteklemeye yönelik temel masaj uygulaması.",
+      "Tüm vücudu kapsayan, kas gevşemesini ve kan dolaşımını desteklemeye yönelik profesyonel masaj uygulaması.",
     description:
-      "Klasik masaj, yüzyıllardır uygulanan geleneksel tekniklerle kas ve doku gevşemesini hedefleyen kapsamlı bir masaj yöntemidir. Gün sonunda biriken gerginliği azaltmaya yardımcı olabilir.",
+      "Klasik masaj, yüzyıllardır uygulanan geleneksel tekniklerle kas ve doku gevşemesini hedefleyen kapsamlı bir masaj yöntemidir. Gün sonunda biriken gerginliği azaltmaya yardımcı olur.",
     whatsappMessage:
       "Merhaba Hürrem Premium, Klasik Masaj hizmetiniz hakkında bilgi almak ve randevu oluşturmak istiyorum.",
     benefits: [
-      "Kas gevşemesine yardımcı olabilir",
-      "Kan dolaşımını destekleyebilir",
-      "Günün yorgunluğunu azaltmaya katkı sağlayabilir",
-      "Genel rahatlama odaklıdır",
-      "Baş ve boyun bölgesindeki gerginliği hafifletmeye yardımcı olabilir",
+      "Kas gevşemesine ve rahatlamaya yardımcı olur",
+      "Kan dolaşımını desteklemeye katkı sağlar",
+      "Günün yorgunluğunu hafifletir",
+      "Bütünsel rahatlama ve dinginlik sunar",
+      "Boyun ve sırt bölgesindeki gerginliği azaltır",
     ],
     whoFor: [
-      "Yoğun iş temposundan bunalmış bireyler",
+      "Yoğun tempodan bunalmış bireyler",
       "Masa başında uzun süre çalışanlar",
-      "Genel rahatlama arayanlar",
+      "Genel rahatlama ve dinlenme arayanlar",
       "Masaja yeni başlayanlar",
-      "Düzenli bakım isteyenler",
+      "Düzenli kişisel bakımına özen gösterenler",
     ],
     duration: "60 – 90 dakika",
     seo: {
       title: "Denizli Klasik Masaj | Hürrem Premium",
       description:
-        "Denizli'de evde klasik masaj hizmeti. Kas gevşemesi ve rahatlama odaklı profesyonel uygulama. WhatsApp'tan randevu alın.",
-      h1: "Denizli'de Evde Klasik Masaj",
+        "Denizli'de profesyonel klasik masaj seansları. Kas gevşemesi ve derin rahatlama için WhatsApp'tan hemen randevu alın.",
+      h1: "Denizli Klasik Masaj Terapisi",
     },
     content: {
       whatIsIt:
-        "Klasik masaj, efloraj, petrisaj, friksyon ve tapotman gibi temel tekniklerin bir arada kullanıldığı geleneksel bir masaj yöntemidir. Bu teknikler sırayla uygulanarak kas dokusunun gevşemesine, kan dolaşımının canlanmasına ve genel rahatlama hissinin artmasına katkı sağlayabilir. Uzun ve akıcı hareketlerden oluşan bu uygulama, özellikle stresli iş hayatından ve günlük koşuşturmacadan yorgun düşmüş bireyler için tercih edilebilir bir seçenek olabilir.",
+        "Klasik masaj, efloraj, petrisaj, friksyon ve tapotman gibi temel tekniklerin harmanlandığı köklü bir masaj yöntemidir. Kas dokusunun gevşemesine, kan dolaşımının hızlanmasına ve genel huzur hissinin artmasına katkıda bulunur. Uzun ve akıcı hareketlerden oluşan bu uygulama, günlük stres ve yorgunluktan arınmak isteyenler için mükemmel bir tercihtir.",
       sessionDetails:
-        "Seans öncesinde kısaca konuşarak hangi bölgede yoğunlaşılacağı belirlenir. Uygulama boyun, sırt, bel, bacak ve kol bölgelerini kapsayabilir. Yoğunluk tercihinize göre ayarlanabilir. Masaj yağları kullanılır, cilt tipinize uygun tercih yapılabilir.",
+        "Seans öncesinde terapistiniz ile kısa bir ön görüşme yapılarak özellikle hangi kas gruplarına yoğunlaşılacağı belirlenir. Sırt, omuz, boyun, bacak ve kol bölgeleri özenle çalışılır. Baskı seviyesi tamamen sizin konforunuza göre ayarlanır.",
       beforeSession:
-        "Seans öncesinde ağır yemek yememek tercih edilir. Rahat ve gevşek kıyafetler giymeniz kolaylık sağlar. Herhangi bir sağlık durumunuz varsa önceden belirtmeniz önerilir.",
+        "Seans öncesinde hafif beslenmeniz ve bol su tüketmeniz önerilir. Seans sonrasında kendinize kısa bir dinlenme süresi ayırmak masajın etkisini artıracaktır.",
       denizliAdvantage:
-        "Denizli'de evde klasik masaj hizmeti sunmamızın en büyük avantajı, masaj sonrası dinlenme sürecinizin doğrudan evinizde geçmesidir. Bir masaj salonuna gidip gelme stresi olmadan, kendi alanınızda tam anlamıyla rahatlayabilirsiniz.",
+        "Denizli'de Hürrem Premium kalitesiyle sunulan klasik masaj hizmeti; sakin, hijyenik ve özel bir atmosferde sunulmaktadır.",
     },
   },
   {
     slug: "badi-masaj",
     name: "Badi Masaj",
     shortName: "Badi",
-    tagline: "Derin doku çalışması ile yoğun rahatlama",
+    image: "/images/medikal-masaj.webp",
+    tagline: "Derin doku odaklı yoğun ve rahatlatıcı çalışma",
     shortDescription:
-      "Daha derin kas katmanlarına yönelik, yoğun baskı teknikleriyle uygulanan masaj yöntemi.",
+      "Daha derin kas katmanlarına yönelik, özel tekniklerle uygulanan etkili masaj yöntemi.",
     description:
-      "Badi masaj, kas dokusunun daha derin katmanlarını hedefleyen, belirli noktalara odaklanarak uygulanan bir masaj tekniğidir. Yoğunluk hissi arayanlar için tercih edilebilir.",
+      "Badi masaj, kas dokusunun derin katmanlarını hedefleyen, belirli baskı noktalarına odaklanarak uygulanan profesyonel bir tekniktir.",
     whatsappMessage:
       "Merhaba Hürrem Premium, Badi Masaj hizmetiniz hakkında bilgi almak ve randevu oluşturmak istiyorum.",
     benefits: [
-      "Derin kas dokusuna yönelik çalışma",
-      "Yoğun gerginlik hissini azaltmaya yardımcı olabilir",
-      "Belirli bölgelere odaklanma imkânı",
-      "Rahatlama ve dinginlik hissi sağlayabilir",
+      "Derin kas liflerine yönelik çalışma",
+      "Yoğun gerginlik ve tutulmaları hafifletir",
+      "Bölgesel odaklanma ve rahatlama imkânı",
+      "Uzun süreli bedensel hafiflik hissi",
     ],
     whoFor: [
-      "Yoğun fiziksel aktivite sonrası dinlenmek isteyenler",
-      "Belirli bölgelerde yoğun gerginlik hisseden bireyler",
-      "Daha derin bir masaj deneyimi arayanlar",
+      "Yoğun fiziksel aktivite veya spor yapanlar",
+      "Kronik kas tutulması yaşayanlar",
+      "Daha güçlü ve derin baskı arayanlar",
     ],
     duration: "60 – 90 dakika",
     seo: {
       title: "Denizli Badi Masaj | Hürrem Premium",
       description:
-        "Denizli'de evde badi masaj hizmeti. Derin kas çalışması ile yoğun rahatlama. WhatsApp'tan randevu alın.",
-      h1: "Denizli'de Evde Badi Masaj",
+        "Denizli'de derin doku ve badi masaj hizmeti. Yoğun rahatlama ve profesyonel seans için WhatsApp'tan bilgi alın.",
+      h1: "Denizli Badi Masaj Deneyimi",
     },
     content: {
       whatIsIt:
-        "Badi masaj, yüzeysel kas katmanlarının ötesine geçerek daha derin doku alanlarına yönelik çalışan bir masaj tekniğidir. Uygulayıcı, belirli bölgelerde odaklanmış baskı uygulayarak kas dokusundaki gerginliği gidermeye çalışır. Klasik masaja kıyasla daha yoğun bir his sunar ve bu yoğunluğu tercih eden bireyler için iyi bir seçenek olabilir.",
+        "Badi masaj, yüzeysel dokunuşların ötesine geçerek kasların derinine nüfuz eden baskı tekniklerini içerir. Kas düğümlerinin açılmasına, dokuların gevşemesine ve hareket kabiliyetinin artmasına yardımcı olur.",
       sessionDetails:
-        "Seans öncesinde hangi bölgelerde yoğunlaşılacağı belirlenir. Baskı yoğunluğu sizin tercihinize göre ayarlanabilir. Sırt, bel, boyun ve bacak bölgelerine odaklanılabilir.",
+        "Baskı yoğunluğu kişiye özel ayarlanır. Sırt, bel, omuz ve bacak bölgelerine yoğunlaşılır. İhtiyacınıza uygun aromatik ve doğal masaj yağları eşliğinde uygulanır.",
       beforeSession:
-        "Bolca su içmeniz önerilir. Ağır egzersiz sonrasında kısa bir süre beklemek tercih edilebilir. Herhangi bir sağlık durumu veya hassasiyetinizi önceden belirtmeniz önerilir.",
+        "Seans öncesi bol su tüketilmesi ve ağır yemeklerden kaçınılması önerilir.",
       denizliAdvantage:
-        "Denizli'de evde badi masaj hizmetimiz sayesinde, yoğun bir masaj seansının ardından doğrudan evinizin konforunda dinlenebilirsiniz. Dışarı çıkma zorunluluğu olmadan dinlenme sürecinizi tamamlayabilirsiniz.",
+        "Denizli'de uzman eller tarafından uygulanan bu masajla bedeninizi yeniden enerjiyle doldurabilirsiniz.",
     },
   },
   {
     slug: "soft-masaj",
     name: "Soft Masaj",
     shortName: "Soft",
+    image: "/images/soft-masaj.webp",
     tagline: "Nazik dokunuşlarla derin dinginlik",
     shortDescription:
-      "Hafif ve nazik dokunuşlarla uygulanan, zihinsel ve bedensel rahatlama odaklı masaj yöntemi.",
+      "Hafif ve dinlendirici dokunuşlarla uygulanan, zihinsel ve bedensel rahatlama odaklı masaj.",
     description:
-      "Soft masaj, yüzeysel ve nazik dokunuşlarla gerçekleştirilen, beden üzerinde sakinleştirici bir etki bırakması hedeflenen masaj tekniğidir. Hassas cilt yapısına sahip bireyler için uygun olabilir.",
+      "Soft masaj, yumuşak ve akıcı hareketlerle gerçekleştirilen, sinir sistemini sakinleştirmeyi ve bedeni tamamen dinlendirmeyi amaçlayan özel bir tekniktir.",
     whatsappMessage:
       "Merhaba Hürrem Premium, Soft Masaj hizmetiniz hakkında bilgi almak ve randevu oluşturmak istiyorum.",
     benefits: [
-      "Nazik ve sakinleştirici bir deneyim sunar",
-      "Zihinsel rahatlama odaklıdır",
-      "Hassas cilt yapısına uygun olabilir",
-      "Uyku kalitesini olumlu etkileyebilir",
-      "Stres azaltma odaklıdır",
+      "Nazik ve huzur veren dinlendirici atmosfer",
+      "Zihinsel dinginlik ve stresin hafifletilmesi",
+      "Hassas cilt yapısına tam uyum",
+      "Kaliteli ve kesintisiz uykuya destek",
     ],
     whoFor: [
-      "Hassas veya duyarlı cilt yapısı olanlar",
-      "Yoğun baskı istemeyenler",
-      "Zihinsel rahatlama önceliği olanlar",
-      "Masaj deneyimine yeni başlayanlar",
-      "Gevşeme ve uyku kalitesi için masaj tercih edenler",
+      "Ağır baskıdan hoşlanmayanlar",
+      "Zihinsel yorgunluk ve stres yaşayanlar",
+      "Hafif ve dinlendirici bir dokunuş arayanlar",
     ],
     duration: "45 – 75 dakika",
     seo: {
       title: "Denizli Soft Masaj | Hürrem Premium",
       description:
-        "Denizli'de evde soft masaj hizmeti. Nazik dokunuşlarla zihinsel ve bedensel rahatlama. WhatsApp'tan randevu alın.",
-      h1: "Denizli'de Evde Soft Masaj",
+        "Denizli'de yumuşak ve dinlendirici soft masaj terapisi. Stresten arınmak ve huzur bulmak için WhatsApp'tan randevu alın.",
+      h1: "Denizli Soft Masaj & Dinginlik Terapisi",
     },
     content: {
       whatIsIt:
-        "Soft masaj, güçlü baskı yerine hafif, akıcı ve sakinleştirici dokunuşları ön planda tutan bir masaj yaklaşımıdır. Sinir sistemini sakinleştirmeye yardımcı olabilecek bu teknik, özellikle zihinsel yorgunluk veya stres hisseden bireyler için tercih edilebilir. Yoğun kas çalışması yerine genel bir rahatlama ve dinginlik hissi sunmayı amaçlar.",
+        "Soft masaj, sert müdahalelerden uzak, ritmik ve hafif dokunuşlarla bedenin enerji dengesini destekleyen, tam anlamıyla gevşeme odaklı bir masaj türüdür.",
       sessionDetails:
-        "Hafif basınçlı, uzun ve akıcı hareketler uygulanır. Tüm vücut veya belirli bölgeler üzerinde çalışılabilir. Rahatsız edici bir his olmaksızın sakinleştirici bir deneyim sunulur.",
+        "Yumuşak ritimlerle tüm bedene hafif basınç uygulanır. Rahatlatıcı müzik ve hafif aromatik kokular eşliğinde sunulur.",
       beforeSession:
-        "Rahat kıyafetler giymeniz tercih edilir. Seans öncesinde sakin bir ortam oluşturulabilir. Herhangi bir cilt hassasiyetiniz varsa önceden belirtmeniz önerilir.",
+        "Seansa zihninizi boşaltarak gelmeniz ve kendinizi müziğin ritmine bırakmanız tavsiye edilir.",
       denizliAdvantage:
-        "Soft masaj sonrası hissedilen dinginliği evinizin kendi atmosferinde yaşamak deneyimi daha da anlamlı kılar. Denizli'de hizmet verdiğimiz için seans sonrasında doğrudan istirahat edebilirsiniz.",
+        "Günün yoğun temposundan sıyrılıp kendinize ayıracağınız en dingin zaman dilimi için Denizli'de Hürrem Premium yanınızda.",
     },
   },
   {
     slug: "aroma-terapi-masaji",
     name: "Aroma Terapi Masajı",
     shortName: "Aroma Terapi",
-    tagline: "Doğal yağların eşliğinde bütünsel rahatlama",
+    image: "/images/aroma-terapi.webp",
+    tagline: "Doğal bitki özleri eşliğinde duyusal yenilenme",
     shortDescription:
-      "Bitkisel esansiyel yağların nazikçe uygulanmasıyla gerçekleştirilen, koku ve dokunuşun bir araya geldiği masaj deneyimi.",
+      "Özel bitkisel esansiyel yağların rahatlatıcı kokusu ve yumuşak masaj tekniklerinin muazzam uyumu.",
     description:
-      "Aroma terapi masajı, esansiyel yağların taşıyıcı yağlarla birleştirilerek cilde uygulandığı, hem dokunuşun hem de aromaterapi kokuların bir arada sunulduğu özel bir masaj deneyimidir.",
+      "Aroma terapi masajı, doğal bitki özlerinden elde edilen esansiyel yağlarla uygulanan, hem bedensel hem de ruhsal denge sağlayan bütüncül bir spa deneyimidir.",
     whatsappMessage:
       "Merhaba Hürrem Premium, Aroma Terapi Masajı hizmetiniz hakkında bilgi almak ve randevu oluşturmak istiyorum.",
     benefits: [
-      "Hem dokunuş hem de koku duyusuna hitap eder",
-      "Zihinsel rahatlama odaklıdır",
-      "Lavanta, bergamot gibi bitkisel yağlar kullanılabilir",
-      "Sakinleştirici bir atmosfer oluşturabilir",
-      "Cilt nemini destekleyebilir",
+      "Doğal esansiyel yağların dinlendirici etkisi",
+      "Cildi derinlemesine nemlendirir ve besler",
+      "Duyusal rahatlama ve ferahlık sağlar",
+      "Zihinsel odaklanmayı ve sakinliği artırır",
     ],
     whoFor: [
-      "Bütünsel bir rahatlama deneyimi arayanlar",
-      "Doğal yağlara ilgi duyanlar",
-      "Stres ve zihinsel yorgunluk hisseden bireyler",
-      "Aromaterapi ile tanışmak isteyenler",
+      "Aromatik kokuları ve doğal yağları sevenler",
+      "Ruhsal ve bedensel bütünlük arayanlar",
+      "Cildine ipeksi bir dokunuş kazandırmak isteyenler",
     ],
     duration: "60 – 90 dakika",
     seo: {
       title: "Denizli Aroma Terapi Masajı | Hürrem Premium",
       description:
-        "Denizli'de evde aroma terapi masajı hizmeti. Esansiyel yağlar eşliğinde bütünsel rahatlama deneyimi. WhatsApp'tan randevu alın.",
-      h1: "Denizli'de Evde Aroma Terapi Masajı",
+        "Denizli'de doğal esansiyel yağlarla aroma terapi masajı. Ruhunuzu dinlendirecek özel seans için WhatsApp'tan iletişime geçin.",
+      h1: "Denizli Aroma Terapi Masajı",
     },
     content: {
       whatIsIt:
-        "Aroma terapi masajı, bitkisel esansiyel yağların taşıyıcı yağlarla seyreltilerek cilde tatbik edildiği özel bir masaj deneyimidir. Lavanta, okaliptüs, bergamot ve gül gibi farklı aromalar farklı ruh halleri için tercih edilebilir. Koku ve dokunuşun birleşimi, daha derin bir rahatlama deneyimi sunabilir.",
+        "Lavanta, portakal çiçeği, okaliptüs gibi saf bitki yağlarının harmanlandığı bu masaj, kokuların duyular üzerindeki etkisiyle kasların gevşemesini bir araya getirir.",
       sessionDetails:
-        "Tercihlerinize göre uygun esansiyel yağ seçimi yapılır. Nazik ve akıcı hareketlerle yağlar cilde işlenir. Koku seçiminde kişisel tercihleriniz ve herhangi bir alerjiniz göz önünde bulundurulur.",
+        "Seans öncesi koku tercihiniz belirlenir ve yağlar vücut sıcaklığına getirilerek özel masaj hareketleriyle cilde yedirilir.",
       beforeSession:
-        "Esansiyel yağlara karşı bilinen bir alerjiniz varsa önceden belirtmeniz önerilir. Seans sonrasında cilde sürülen yağları durulamak için tercih edebilirsiniz.",
+        "Alerjik hassasiyetiniz varsa seans başında terapistinize belirtmeniz rica olunur.",
       denizliAdvantage:
-        "Aroma terapi masajının sunduğu sakin ve dingin atmosferi evinizde yaşamak deneyimi daha da kişisel kılar. Denizli'de evde aroma terapi masajı ile dışarı çıkmadan kendi huzurlu alanınızda dinlenebilirsiniz.",
+        "Denizli'de en kaliteli doğal yağlarla hazırlanan seanslarımız, kendinizi özel hissetmenizi sağlar.",
     },
   },
   {
     slug: "sultan-masaji",
     name: "Sultan Masajı",
     shortName: "Sultan",
-    tagline: "Kapsamlı ve özel bir masaj deneyimi",
+    image: "/images/sultan-masaj.webp",
+    tagline: "Kapsamlı ve saraylara layık VIP masaj",
     shortDescription:
-      "Birden fazla tekniğin bir arada sunulduğu, uzun süreli ve kapsamlı masaj uygulaması.",
+      "Birden fazla masaj tekniğinin harmanlandığı, uzun süreli ve ayrıcalıklı masaj seansı.",
     description:
-      "Sultan masajı, farklı masaj tekniklerini bir araya getirerek uzun ve kapsamlı bir seans sunar. Daha özel ve geniş kapsamlı bir deneyim arayanlar için tasarlanmıştır.",
+      "Sultan masajı, geleneksel tekniklerin modern rahatlama ritüelleriyle birleştirildiği lüks ve kapsamlı bir terapidir.",
     whatsappMessage:
       "Merhaba Hürrem Premium, Sultan Masajı hizmetiniz hakkında bilgi almak ve randevu oluşturmak istiyorum.",
     benefits: [
-      "Kapsamlı ve uzun süreli bir deneyim",
-      "Birden fazla teknik bir arada uygulanır",
-      "Tüm vücut bütüncül olarak ele alınır",
-      "Özel ve yoğun rahatlama odaklıdır",
+      "En kapsamlı ve uzun süreli terapi deneyimi",
+      "Çoklu tekniklerin mükemmel uyumu",
+      "Ayrıcalıklı ve yüksek konforlu seans",
+      "Tamamen yenilenmiş ve canlanmış hissetme",
     ],
     whoFor: [
-      "Kapsamlı bir masaj deneyimi isteyenler",
-      "Kendine uzun süreli zaman ayırmak isteyenler",
-      "Farklı teknikleri bir arada denemek isteyenler",
-      "Özel bir gün veya kaçamak arayan bireyler",
+      "Kendine en lüks masaj deneyimini hediye etmek isteyenler",
+      "Uzun ve kesintisiz bakım arayanlar",
+      "Özel günlerde ayrıcalıklı bir seans tercih edenler",
     ],
     duration: "90 – 120 dakika",
     seo: {
       title: "Denizli Sultan Masajı | Hürrem Premium",
       description:
-        "Denizli'de evde sultan masajı hizmeti. Kapsamlı ve özel masaj deneyimi. WhatsApp'tan randevu alın.",
-      h1: "Denizli'de Evde Sultan Masajı",
+        "Denizli'de VIP sultan masajı deneyimi. Kapsamlı ve ayrıcalıklı seanslar için WhatsApp'tan randevu alın.",
+      h1: "Denizli Sultan Masajı & VIP Terapi",
     },
     content: {
       whatIsIt:
-        "Sultan masajı, tek bir tekniğe bağlı kalmadan farklı masaj yöntemlerini bir seans içinde harmanlayan, daha uzun süreli ve kapsamlı bir uygulamadır. Klasik teknikler, aromaterapi unsurları ve bölgesel odaklı çalışmalar bir arada sunulabilir. Kendine daha fazla zaman ayırmak ve bütünsel bir deneyim yaşamak isteyenler için tercih edilebilir.",
+        "Sultan Masajı, birden çok tekniği tek bir akışta birleştiren, tepeden tırnağa tüm bedeni şımartan özel bir masaj ritüelidir.",
       sessionDetails:
-        "Seans başında kısa bir değerlendirme yapılır. Tercihlerinize ve ihtiyaçlarınıza göre teknik kombinasyonu belirlenir. Uzun süreli ve akışkan bir deneyim sunulur.",
+        "Uzun süreli bu seansta vücudun her noktası titizlikle işlenir, özel yağlar ve teknik geçişler uygulanır.",
       beforeSession:
-        "Uzun bir seans olduğu için rahat ve dinlendirici bir zaman seçmeniz önerilir. Seans öncesinde yeterince su içmeniz tercih edilir.",
+        "Seans uzun süreceği için kendinize acele etmeyeceğiniz geniş bir vakit ayırmanız önerilir.",
       denizliAdvantage:
-        "Uzun süreli sultan masajının ardından herhangi bir yere gitme ihtiyacı duymadan doğrudan evinizde dinlenebilmeniz bu hizmetin en büyük avantajıdır. Denizli'de hizmet verdiğimiz için tüm konfor evinizin kapısına kadar gelir.",
+        "Denizli'de sultanlara yakışır konfor ve ihtimam Hürrem Premium'da sizi bekliyor.",
     },
   },
   {
     slug: "mix-masaj",
     name: "Mix Masaj",
     shortName: "Mix",
-    tagline: "Farklı tekniklerin özel kombinasyonu",
+    image: "/images/mix-masaj.webp",
+    tagline: "İhtiyacınıza göre kişiselleştirilmiş teknik kombinasyonu",
     shortDescription:
-      "Sizin tercihlerinize göre hazırlanan, farklı masaj tekniklerinin harmanlandığı kişiselleştirilmiş masaj.",
+      "Klasik, aroma, derin doku gibi farklı yöntemlerin vücudunuzun ihtiyacına göre harmanlandığı seans.",
     description:
-      "Mix masaj, ihtiyaçlarınıza ve tercihlerinize göre farklı masaj tekniklerinin bir araya getirildiği kişiselleştirilmiş bir seçenektir.",
+      "Mix masaj, tek bir ekole bağlı kalmadan sizin o anki yorgunluk ve ihtiyaçlarınıza göre tasarlanan hibrit bir masaj seansıdır.",
     whatsappMessage:
       "Merhaba Hürrem Premium, Mix Masaj hizmetiniz hakkında bilgi almak ve randevu oluşturmak istiyorum.",
     benefits: [
-      "Tamamen kişiselleştirilmiş deneyim",
-      "Farklı bölgelere farklı teknikler uygulanabilir",
-      "Esneklik ve uyarlanabilirlik",
-      "Birden fazla ihtiyacı tek seansta karşılayabilir",
+      "Tamamen size özel kurgulanan seans planı",
+      "Farklı bölgelere özel teknik uygulama",
+      "Yüksek memnuniyet ve odaklanmış rahatlama",
     ],
     whoFor: [
-      "Belirli bir tekniğe bağlı kalmak istemeyenler",
-      "Farklı bölgeler için farklı yaklaşım arayanlar",
-      "Daha önce masaj deneyimi olanlar",
-      "Kişiselleştirilmiş bir hizmet tercih edenler",
+      "Birden fazla masaj türünün faydasını tek seansta isteyenler",
+      "Belirli bölgelerinde farklı yoğunluk talep edenler",
     ],
     duration: "60 – 90 dakika",
     seo: {
       title: "Denizli Mix Masaj | Hürrem Premium",
       description:
-        "Denizli'de evde mix masaj hizmeti. Farklı masaj tekniklerinin özel kombinasyonu ile kişiselleştirilmiş deneyim. WhatsApp'tan randevu alın.",
-      h1: "Denizli'de Evde Mix Masaj",
+        "Denizli'de kişiye özel mix masaj seansı. Farklı tekniklerin harmanlandığı eşsiz rahatlama için hemen yazın.",
+      h1: "Denizli Kişiye Özel Mix Masaj",
     },
     content: {
       whatIsIt:
-        "Mix masaj, tek bir teknikle sınırlı kalmak yerine sizin tercih ve ihtiyaçlarınıza göre şekillendirilen esnek bir masaj seçeneğidir. Seans öncesinde kısa bir değerlendirme yapılarak hangi bölgelere hangi yoğunlukta çalışılacağı belirlenir. Bu sayede farklı beklentiler tek bir seans içinde karşılanabilir.",
+        "Mix masaj, uzman terapistin değerlendirmesi ve sizin talepleriniz doğrultusunda en verimli tekniklerin bir araya getirilmesidir.",
       sessionDetails:
-        "Seans başında ihtiyaçlarınız dinlenir ve uygun teknik kombinasyonu belirlenir. Seans boyunca geri bildirimlerinize göre uyarlamalar yapılabilir.",
+        "Sırt bölgesine daha yoğun, omuz ve baş bölgesine daha sakin teknikler gibi kişiye özel kombinasyonlar uygulanabilir.",
       beforeSession:
-        "Önceden düşündüğünüz veya dikkat çekilmesini istediğiniz bölgeleri belirtmeniz seanstan daha iyi yararlanmanızı sağlayabilir.",
+        "Hangi bölgelerinizin daha çok rahatlamaya ihtiyacı olduğunu seans öncesinde belirtmeniz yeterlidir.",
       denizliAdvantage:
-        "Denizli'de evde mix masaj hizmetimiz, salon ortamının katı kurallarından uzak, size özel ve esnek bir deneyim sunar. Kendi evinizde, kendi saatinizde hizmet almanın konforunu yaşarsınız.",
+        "Denizli'de ezber kalıplardan uzak, tam size hitap eden bir masaj için en popüler tercihtir.",
     },
   },
   {
     slug: "hurrem-masaji",
     name: "Hürrem Masajı",
-    shortName: "Hürrem",
-    tagline: "Markamızın özel imza masajı",
+    shortName: "Hürrem İmza",
+    image: "/images/vip-section-bg.webp",
+    tagline: "Markamızın imza masaj ritüeli",
     shortDescription:
-      "Hürrem Premium'un özel olarak geliştirdiği, birden fazla tekniği harmanlayan imza masaj deneyimi.",
+      "Hürrem Premium'un özel dokunuşları ve ayrıcalıklı konseptiyle hazırlanan imza masaj seansı.",
     description:
-      "Hürrem Masajı, markamızın kendi yaklaşımıyla geliştirdiği özel bir seans deneyimidir. Farklı tekniklerin ahenkli bir şekilde bir araya getirildiği bu masaj, Hürrem Premium'u tercih edenler için özel olarak sunulmaktadır.",
+      "Hürrem Masajı, markamızın vizyonunu yansıtan, hem bedeni hem ruhu tazeleyen en özel ve seçkin masaj uygulamamızdır.",
     whatsappMessage:
       "Merhaba Hürrem Premium, Hürrem Masajı hizmetiniz hakkında bilgi almak ve randevu oluşturmak istiyorum.",
     benefits: [
-      "Hürrem Premium'a özel teknik kombinasyonu",
-      "Bütüncül ve dengeli bir deneyim",
-      "Hem rahatlama hem de dinginlik odaklı",
-      "Özenli ve titiz uygulama",
+      "Hürrem Premium'a özel imza akış ve teknikler",
+      "Özel aromatik yağ esansları",
+      "Üst düzey konfor ve kusursuz rahatlama",
     ],
     whoFor: [
-      "Hürrem Premium deneyimini tam anlamıyla yaşamak isteyenler",
-      "Markamıza özgü yaklaşımı merak edenler",
-      "Kendine özel bir masaj seçeneği arayanlar",
+      "Fark yaratan bir deneyim arayanlar",
+      "Hürrem Premium kalitesini tam anlamıyla yaşamak isteyenler",
     ],
     duration: "75 – 105 dakika",
     seo: {
       title: "Denizli Hürrem Masajı | Hürrem Premium",
       description:
-        "Denizli'de evde Hürrem Masajı hizmeti. Hürrem Premium'un imza masaj deneyimi. WhatsApp'tan randevu alın.",
-      h1: "Denizli'de Evde Hürrem Masajı",
+        "Denizli'de Hürrem Premium'un imza masajı. Ayrıcalıklı seans ve VIP konsept için WhatsApp'tan bilgi alın.",
+      h1: "Denizli Hürrem İmza Masajı",
     },
     content: {
       whatIsIt:
-        "Hürrem Masajı, Hürrem Premium markasının kendi deneyimiyle şekillendirdiği, farklı masaj tekniklerini kendine has bir akışla bir araya getiren imza masaj seçeneğidir. Bu masajda kullanılan teknikler ve uygulama sırası markamıza özeldir. Rahatlama ve dinginliği bir arada sunan, başından sonuna kadar özenle yönetilen bir seans deneyimi yaşamanızı amaçlar.",
+        "Hürrem Masajı, özel seçilmiş yağlar ve terapistimizin akıcı ritimleri eşliğinde günün tüm yükünü geride bırakmanızı sağlayan imza terapimizdir.",
       sessionDetails:
-        "Seans, kişisel tercihleriniz alınarak başlar. Markaya özel teknik sıralaması uygulanır. Hem fiziksel hem de zihinsel rahatlama odaklı bir akış izlenir.",
+        "Baştan ayağa özel enerji akışıyla kurgulanmış seansımızda kendinizi adeta yeniden doğmuş hissedeceksiniz.",
       beforeSession:
-        "Rahat kıyafetler seçmeniz önerilir. Seans öncesinde kendinize küçük bir zaman dilimi ayırmanız deneyimden daha fazla yararlanmanızı sağlayabilir.",
+        "Randevu saatinizden birkaç dakika önce sakinleşip seansa hazırlanmanız önerilir.",
       denizliAdvantage:
-        "Denizli'de evde Hürrem Masajı, size özel bir deneyimi kendi evinizin atmosferinde yaşatır. Dışarı çıkma zorunluluğu olmadan markanın imza yaklaşımını deneyimleyebilirsiniz.",
+        "Denizli'de başka hiçbir yerde bulamayacağınız bu özel imza masajı deneyimlemek için bize ulaşın.",
     },
   },
   {
     slug: "tai-masaji",
     name: "Tai Masajı",
     shortName: "Tai",
-    tagline: "Geleneksel Tayland yaklaşımından ilham alan teknik",
+    image: "/images/spa-relax-green.webp",
+    tagline: "Geleneksel Tayland esneme ve basınç tekniği",
     shortDescription:
-      "Tayland masaj geleneğinden ilham alan, esneme ve baskı tekniklerini birleştiren aktif masaj uygulaması.",
+      "Vücuttaki enerji hatlarını açmayı ve esnekliği artırmayı hedefleyen aktif ve ritmik masaj.",
     description:
-      "Tai masajı, geleneksel Tayland masajından ilham alan, vücut ağırlığı ve esneme hareketlerini içeren, geleneksel tekniklerden uyarlanmış bir masaj yöntemidir.",
+      "Tai masajı, pasif esneme hareketleri ve noktasal baskılarla uygulanan, bedeni canlandıran geleneksel bir Uzak Doğu masajıdır.",
     whatsappMessage:
       "Merhaba Hürrem Premium, Tai Masajı hizmetiniz hakkında bilgi almak ve randevu oluşturmak istiyorum.",
     benefits: [
-      "Esnekliği artırmaya yardımcı olabilir",
-      "Hem baskı hem esneme içerir",
-      "Farklı ve aktif bir masaj deneyimi sunar",
-      "Enerji akışını destekleyebileceği düşünülür",
+      "Eklem hareketliliğini ve esnekliği artırır",
+      "Enerji kanallarını açarak canlılık verir",
+      "Duruş bozukluklarını ve kas gerginliklerini rahatlatır",
     ],
     whoFor: [
-      "Farklı ve aktif bir masaj deneyimi arayanlar",
-      "Esnekliğini geliştirmek isteyenler",
-      "Klasik yatay masajın dışında bir şey denemek isteyenler",
-      "Aktif yaşam tarzı sürdüren bireyler",
+      "Aktif, esnetici ve canlandırıcı masaj isteyenler",
+      "Vücudunu esnetmek ve hafiflemek isteyenler",
     ],
     duration: "60 – 90 dakika",
     seo: {
       title: "Denizli Tai Masajı | Hürrem Premium",
       description:
-        "Denizli'de evde tai masajı hizmeti. Geleneksel Tayland geleneğinden ilham alan esneme ve baskı teknikleri. WhatsApp'tan randevu alın.",
-      h1: "Denizli'de Evde Tai Masajı",
+        "Denizli'de geleneksel Tai masajı deneyimi. Esneklik ve canlılık kazandıran profesyonel seans için hemen ulaşın.",
+      h1: "Denizli Geleneksel Tai Masajı",
     },
     content: {
       whatIsIt:
-        "Tai masajı, geleneksel Tayland masaj geleneğinden ilham alınarak uygulanan, yalnızca yağ kullanmayan ve esneme hareketlerini de içeren aktif bir masaj yöntemidir. Uygulayıcı, hem baskı noktaları üzerinde çalışır hem de belirli esneme pozisyonlarına rehberlik eder. Bu teknik, vücudun daha bütüncül bir rahatlama hissi yaşamasına yardımcı olabilir.",
+        "Tai masajı, ritmik baskı ve yoga benzeri pasif esneme hareketlerini birleştiren, yağsız ve rahat kıyafetlerle de uygulanabilen dinamik bir masaj türüdür.",
       sessionDetails:
-        "Rahat ve esnek kıyafetlerle uygulanır. Seans zemin üzerinde veya masada gerçekleştirilebilir. Hem aktif hem pasif hareketler içerir.",
+        "Terapist beden ağırlığını kullanarak belirli enerji meridyenleri boyunca baskı ve germe uygular.",
       beforeSession:
-        "Rahat ve hareketli giysiler tercih edilir. Dar kıyafet ve kot pantolon uygun değildir. Herhangi bir eklem veya hareket kısıtlığınız varsa önceden belirtmeniz önerilir.",
+        "Rahat ve esnek kıyafetler tercih etmeniz tavsiye edilir.",
       denizliAdvantage:
-        "Denizli'de evde tai masajı hizmetimiz sayesinde geniş salon alanlarına gitme zahmetine girmeden kendi evinizin rahat ortamında bu deneyimi yaşayabilirsiniz.",
+        "Denizli'de uzman ellerde Tai masajının getirdiği eşsiz canlılığı hissedin.",
     },
   },
 ];

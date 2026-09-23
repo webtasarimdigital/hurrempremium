@@ -2,108 +2,106 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
 import Breadcrumb from "@/components/Breadcrumb";
+import { WhatsAppCTA } from "@/components/CTAButtons";
 
 export const metadata: Metadata = {
   title: "Hakkımızda | Hürrem Premium",
   description:
-    "Hürrem Premium hakkında bilgi edinin. Denizli'de evde masaj hizmeti sunan markamızın yaklaşımı, değerleri ve hizmet anlayışı.",
+    "Hürrem Premium hakkında bilgi edinin. Denizli'de seçkin masaj ve spa terapileri sunan markamızın yaklaşımı, değerleri ve hizmet anlayışı.",
   alternates: {
     canonical: `${siteConfig.url}/hakkimizda`,
   },
   openGraph: {
     title: "Hakkımızda | Hürrem Premium",
-    description: "Denizli'de evde masaj hizmeti sunan Hürrem Premium hakkında bilgi edinin.",
+    description: "Denizli'de seçkin masaj hizmeti sunan Hürrem Premium hakkında bilgi edinin.",
     url: `${siteConfig.url}/hakkimizda`,
   },
 };
 
 const values = [
   {
-    title: "Denizli'ye Odaklı",
-    desc: "Hizmetimiz yalnızca Denizli'de sunulmaktadır. Yerel olmak bize odaklanma ve daha iyi hizmet verme fırsatı tanıyor.",
+    title: "Denizli Odaklı Hizmet",
+    desc: "Hizmetimiz yalnızca Denizli'de sunulmaktadır. Yerel olmak bize odaklanma ve yüksek kaliteli seanslar sunma imkânı tanıyor.",
   },
   {
-    title: "Evinizde Hizmet",
-    desc: "Masaj salonuna gitme zahmetine girmeden kendi ortamınızda hizmet alabilirsiniz. Seans sonrasında doğrudan dinlenebilirsiniz.",
+    title: "Kişiye Özel İlgi",
+    desc: "Her misafirimizin ihtiyacı farklıdır. Seanslarımız sizin yorgunluk ve kas tutulması durumunuza göre şekillendirilir.",
   },
   {
-    title: "Hijyen Önceliği",
-    desc: "Her seans öncesinde ekipman ve malzemelerin hijyeni kontrol edilir. Temizlik ve özen her zaman önceliktir.",
+    title: "Kusursuz Hijyen",
+    desc: "Her seans öncesinde ekipman, ortam ve havluların hijyeni titizlikle sağlanır. Temizlik ve özen en temel önceliğimizdir.",
   },
   {
-    title: "Kolay İletişim",
-    desc: "WhatsApp üzerinden tek bir mesajla randevu oluşturabilir, müsaitlik ve fiyat bilgisi alabilirsiniz.",
+    title: "Hızlı & Kolay Randevu",
+    desc: "WhatsApp üzerinden tek tıkla mesaj atabilir, güncel müsaitlik durumunu ve fiyat detaylarını anında öğrenebilirsiniz.",
   },
   {
-    title: "Geniş Çalışma Saatleri",
-    desc: "Her gün 12:00'den 00:00'a kadar çalışıyoruz. Akşam ve gece randevuları da mümkündür.",
+    title: "12:00 – 00:00 Çalışma Saatleri",
+    desc: "Günün yorgunluğunu dilediğiniz saatte geride bırakabilmeniz için gece saatlerine kadar kesintisiz hizmet veriyoruz.",
   },
   {
-    title: "Farklı Masaj Seçenekleri",
-    desc: "8 farklı masaj türü arasından size uygun olanı seçebilirsiniz. Hangisinin uygun olduğundan emin değilseniz bize danışabilirsiniz.",
+    title: "8 Farklı Masaj Seçeneği",
+    desc: "Klasikten aromaterapiye, derin dokudan özel imza masajlarımıza kadar zengin bir seans yelpazesine sahibiz.",
   },
 ];
 
 export default function HakkimizdaPage() {
-  const whatsappHref = `${siteConfig.whatsappUrl}?text=${encodeURIComponent(siteConfig.whatsappDefaultMessage)}`;
-
   return (
     <>
       {/* Hero */}
-      <section className="bg-brand-dark pt-28 pb-16">
-        <div className="container-custom">
+      <section className="bg-[#1b0d12] pt-32 pb-20 text-white relative overflow-hidden">
+        <div className="container-custom relative z-10">
           <Breadcrumb items={[{ label: "Hakkımızda" }]} dark />
           <div className="mt-8 max-w-2xl">
-            <h1 className="font-serif text-4xl sm:text-5xl text-brand-cream-light font-light mb-5">
+            <span className="text-xs font-bold text-pink-300 tracking-widest uppercase">
+              VİZYONUMUZ VE DEĞERLERİMİZ
+            </span>
+            <h1 className="text-4xl sm:text-5xl font-black mt-2 mb-4 leading-tight">
               Hakkımızda
             </h1>
-            <p className="text-brand-cream/60 leading-relaxed text-lg">
-              Denizli'de evde masaj hizmeti sunan Hürrem Premium, pratik ve kaliteli bir seçenek olarak yolculuğuna devam ediyor.
+            <p className="text-white/70 leading-relaxed text-base sm:text-lg">
+              Denizli&apos;de profesyonel masaj ve spa terapileri sunan Hürrem Premium, bedensel ve ruhsal dinlenme arayanlar için ayrıcalıklı bir adrestir.
             </p>
           </div>
         </div>
       </section>
 
       {/* Story */}
-      <section className="section-padding bg-brand-cream-light">
+      <section className="py-20 bg-[#fcf8f9]">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-14 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative">
-              <div className="relative h-80 lg:h-[450px] overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&q=75&auto=format&fit=crop"
-                  alt="Hürrem Premium - Denizli evde masaj hizmeti"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  width={800}
-                  height={450}
-                />
-              </div>
-              <div className="absolute -bottom-5 -left-5 w-24 h-24 border border-brand-gold/30 hidden lg:block" />
+              <div
+                className="w-full aspect-[4/3] rounded-2xl bg-cover bg-center shadow-xl overflow-hidden"
+                style={{ backgroundImage: "url('/images/man-massage-therapy.jpg')" }}
+              />
             </div>
 
             <div>
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-8 h-px bg-brand-gold" />
-                <span className="text-xs text-brand-gold tracking-[0.25em] uppercase">Hikâyemiz</span>
+              <div className="flex items-center gap-2 text-primary font-bold tracking-wider text-xs uppercase mb-3">
+                <span className="h-0.5 w-6 bg-primary" />
+                HİKÂYEMİZ
               </div>
-              <h2 className="font-serif text-3xl sm:text-4xl text-brand-text font-light mb-6 leading-tight">
-                Denizli&apos;de Evde Masajı<br />
-                <em className="not-italic text-brand-gold">Kolaylaştırmak İstedik</em>
+              <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-6 leading-tight">
+                Denizli&apos;de Masajı <br />
+                <span className="text-primary">Ayrıcalıklı Kılmak İstedik</span>
               </h2>
-              <div className="space-y-4 text-brand-text-secondary leading-relaxed">
+              <div className="space-y-4 text-gray-600 leading-relaxed text-base">
                 <p>
-                  Hürrem Premium, Denizli'de evde masaj hizmeti almak isteyenlerin yaşadığı pratik soruna basit bir çözüm getirmek amacıyla kuruldu.
+                  Hürrem Premium, Denizli&apos;de kaliteli, hijyenik ve profesyonel bir masaj seansı arayan misafirlerimize en üst düzeyde rahatlama sağlamak amacıyla kuruldu.
                 </p>
                 <p>
-                  Kaliteli bir masaj deneyimi yaşamak için salon ortamına gitme zorunluluğu olmamalı. İstediğiniz saatte, kendi evinizde, rahat bir ortamda bu hizmetin alınabilmesi gerekiyor.
+                  Günün yorucu temposu, iş stresi ve hareketsiz yaşam kaslarda ciddi gerginliklere sebep olur. Doğru uygulanan profesyonel bir masaj seansı ise bedeni yeniler, kan dolaşımını rahatlatır ve zihinsel sakinlik kazandırır.
                 </p>
                 <p>
-                  Bu anlayışla Denizli'de evde masaj hizmeti sunmaya başladık. Kolay WhatsApp randevusu, geniş çalışma saatleri ve farklı masaj seçenekleri ile hizmetinize sunulduk.
+                  Hürrem Premium olarak her seansımızda müşteri memnuniyetini, titiz hijyeni ve samimi ilgiyi merkezimize alıyoruz.
                 </p>
-                <p>
-                  Hizmetimiz yalnızca Denizli ile sınırlıdır. Bu tercih bilinçli bir karardır: yerel kalmak, odaklanmak ve işimizi daha iyi yapmak için.
-                </p>
+              </div>
+
+              <div className="mt-8">
+                <WhatsAppCTA location="about_page" variant="primary" className="h-14 px-8 text-base">
+                  WhatsApp&apos;tan Bize Ulaşın
+                </WhatsAppCTA>
               </div>
             </div>
           </div>
@@ -111,110 +109,23 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Values */}
-      <section className="section-padding bg-brand-dark">
+      <section className="py-20 bg-[#1b0d12] text-white">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-8 h-px bg-brand-gold" />
-              <span className="text-xs text-brand-gold tracking-[0.25em] uppercase">Değerlerimiz</span>
-              <div className="w-8 h-px bg-brand-gold" />
-            </div>
-            <h2 className="font-serif text-3xl sm:text-4xl text-brand-cream-light font-light">
-              Bizi Tanımlayan Değerler
-            </h2>
+          <div className="text-center max-w-xl mx-auto mb-14">
+            <span className="text-xs font-bold text-pink-300 tracking-widest uppercase">STANDARTLARIMIZ</span>
+            <h2 className="text-3xl sm:text-4xl font-black mt-2">Bizi Tanımlayan Değerler</h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {values.map((v, i) => (
-              <div key={i} className="p-6 border border-brand-gold/15 hover:border-brand-gold/30 transition-colors">
-                <div className="w-8 h-px bg-brand-gold mb-5" />
-                <h3 className="font-serif text-xl text-brand-cream/90 mb-3">{v.title}</h3>
-                <p className="text-sm text-brand-cream/50 leading-relaxed">{v.desc}</p>
+              <div
+                key={i}
+                className="p-7 rounded-2xl bg-[#26131a] border border-white/10 hover:border-primary/50 transition-all"
+              >
+                <h3 className="text-lg font-bold text-white mb-2">{v.title}</h3>
+                <p className="text-sm text-white/60 leading-relaxed">{v.desc}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* What we offer */}
-      <section className="section-padding bg-brand-cream">
-        <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-14">
-            <div>
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-8 h-px bg-brand-gold" />
-                <span className="text-xs text-brand-gold tracking-[0.25em] uppercase">Hizmet Anlayışımız</span>
-              </div>
-              <h2 className="font-serif text-3xl text-brand-text font-light mb-6">
-                Nasıl Çalışıyoruz?
-              </h2>
-              <div className="space-y-4 text-brand-text-secondary leading-relaxed">
-                <p>
-                  Randevu sürecimiz mümkün olduğunca basit tutulmaya çalışılmıştır. WhatsApp üzerinden bir mesaj yeterlidir. Tercih ettiğiniz masaj türünü ve uygun saatinizi belirtin, müsaitlik durumuna göre size dönüş yaparız.
-                </p>
-                <p>
-                  Seans gününde belirlenen saatte adresinize geliriz. Masaj öncesinde kısa bir değerlendirme yapılır. Tercihleriniz, hassas noktalar ve genel beklentileriniz dinlenir.
-                </p>
-                <p>
-                  Masaj sonrasında herhangi bir ek ulaşım ya da bekleme gerekmez. Kendi ortamınızda doğrudan dinlenme sürecinize geçebilirsiniz.
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <h2 className="font-serif text-3xl text-brand-text font-light mb-6">
-                İletişim Bilgilerimiz
-              </h2>
-              <div className="space-y-5">
-                {[
-                  { label: "İşletme Adı", value: siteConfig.brandName },
-                  { label: "Adres", value: siteConfig.address.full },
-                  { label: "Telefon", value: siteConfig.phone, href: siteConfig.phoneTel },
-                  { label: "E-posta", value: siteConfig.email, href: siteConfig.emailHref },
-                  { label: "Çalışma Saatleri", value: siteConfig.workingHours.full },
-                  { label: "Hizmet Bölgesi", value: siteConfig.address.serviceArea },
-                ].map((item, i) => (
-                  <div key={i} className="flex gap-4 py-3 border-b border-brand-text/8">
-                    <span className="text-xs text-brand-gold uppercase tracking-wider w-32 flex-shrink-0 pt-0.5">{item.label}</span>
-                    {item.href ? (
-                      <a href={item.href} className="text-brand-text-secondary hover:text-brand-text transition-colors text-sm">
-                        {item.value}
-                      </a>
-                    ) : (
-                      <span className="text-brand-text-secondary text-sm">{item.value}</span>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 bg-brand-dark text-center">
-        <div className="container-custom max-w-xl">
-          <h2 className="font-serif text-3xl text-brand-cream-light font-light mb-4">
-            Tanışalım
-          </h2>
-          <p className="text-brand-cream/60 mb-8 leading-relaxed">
-            Hizmetlerimiz ve randevu hakkında WhatsApp üzerinden bilgi alabilirsiniz.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-brand-gold text-brand-dark font-medium px-8 py-4 text-sm hover:bg-brand-gold-light transition-colors"
-            >
-              WhatsApp&apos;tan Yaz
-            </a>
-            <Link
-              href="/hizmetler"
-              className="inline-flex items-center justify-center gap-2 border border-brand-cream/30 text-brand-cream font-medium px-8 py-4 text-sm hover:bg-brand-cream/10 transition-colors"
-            >
-              Hizmetlerimizi İncele
-            </Link>
           </div>
         </div>
       </section>

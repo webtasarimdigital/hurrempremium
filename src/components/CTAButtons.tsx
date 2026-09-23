@@ -7,7 +7,7 @@ interface WhatsAppCTAProps {
   location?: string;
   className?: string;
   children: React.ReactNode;
-  variant?: "gold" | "outline";
+  variant?: "primary" | "outline" | "white";
 }
 
 export function WhatsAppCTA({
@@ -15,15 +15,17 @@ export function WhatsAppCTA({
   location = "unknown",
   className,
   children,
-  variant = "gold",
+  variant = "primary",
 }: WhatsAppCTAProps) {
   const msg = message || siteConfig.whatsappDefaultMessage;
   const href = `${siteConfig.whatsappUrl}?text=${encodeURIComponent(msg)}`;
 
   const baseClass =
-    variant === "gold"
-      ? "inline-flex items-center justify-center gap-2.5 bg-brand-gold text-brand-dark font-medium text-sm tracking-wide hover:bg-brand-gold-light transition-colors duration-200"
-      : "inline-flex items-center justify-center gap-2.5 border border-brand-cream/30 text-brand-cream font-medium text-sm tracking-wide hover:bg-brand-cream/10 transition-colors duration-200";
+    variant === "primary"
+      ? "inline-flex items-center justify-center gap-2.5 bg-primary text-white font-bold text-sm tracking-wide rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-dark hover:scale-102 transition-all duration-200"
+      : variant === "white"
+      ? "inline-flex items-center justify-center gap-2.5 bg-white text-primary font-bold text-sm tracking-wide rounded-xl shadow-lg hover:bg-gray-50 hover:scale-102 transition-all duration-200"
+      : "inline-flex items-center justify-center gap-2.5 border border-white/30 text-white font-bold text-sm tracking-wide rounded-xl hover:bg-white/10 transition-all duration-200";
 
   const handleClick = () => {
     if (typeof window !== "undefined" && (window as any).dataLayer) {
@@ -48,7 +50,7 @@ interface PhoneCTAProps {
   location?: string;
   className?: string;
   children: React.ReactNode;
-  variant?: "outline-dark" | "outline-light" | "gold";
+  variant?: "outline-dark" | "outline-light" | "primary";
 }
 
 export function PhoneCTA({
@@ -58,11 +60,11 @@ export function PhoneCTA({
   variant = "outline-light",
 }: PhoneCTAProps) {
   const variantClass =
-    variant === "gold"
-      ? "inline-flex items-center justify-center gap-2.5 border border-brand-gold/40 text-brand-gold font-medium text-sm tracking-wide hover:bg-brand-gold/10 transition-colors duration-200"
+    variant === "primary"
+      ? "inline-flex items-center justify-center gap-2.5 bg-primary text-white font-bold text-sm tracking-wide rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-dark transition-all duration-200"
       : variant === "outline-dark"
-      ? "inline-flex items-center justify-center gap-2.5 border border-brand-text/20 text-brand-text font-medium text-sm tracking-wide hover:bg-brand-text/5 transition-colors duration-200"
-      : "inline-flex items-center justify-center gap-2.5 border border-brand-cream/30 text-brand-cream font-medium text-sm tracking-wide hover:bg-brand-cream/10 transition-colors duration-200";
+      ? "inline-flex items-center justify-center gap-2.5 border border-gray-300 text-gray-800 font-bold text-sm tracking-wide rounded-xl hover:bg-gray-100 transition-all duration-200"
+      : "inline-flex items-center justify-center gap-2.5 border border-white/30 text-white font-bold text-sm tracking-wide rounded-xl hover:bg-white/15 backdrop-blur-sm transition-all duration-200";
 
   const handleClick = () => {
     if (typeof window !== "undefined" && (window as any).dataLayer) {

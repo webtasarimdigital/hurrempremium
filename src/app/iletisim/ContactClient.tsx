@@ -4,6 +4,7 @@ import { useState } from "react";
 import { siteConfig } from "@/lib/siteConfig";
 import { services } from "@/lib/services";
 import Breadcrumb from "@/components/Breadcrumb";
+import { WhatsAppCTA, PhoneCTA } from "@/components/CTAButtons";
 
 export default function ContactClient() {
   const [formData, setFormData] = useState({
@@ -33,173 +34,178 @@ export default function ContactClient() {
     );
   };
 
-  const whatsappHref = `${siteConfig.whatsappUrl}?text=${encodeURIComponent(siteConfig.whatsappDefaultMessage)}`;
-
   return (
     <>
-      <section className="bg-brand-dark pt-28 pb-16">
-        <div className="container-custom">
+      <section className="bg-[#1b0d12] pt-32 pb-20 text-white relative overflow-hidden">
+        <div className="container-custom relative z-10">
           <Breadcrumb items={[{ label: "İletişim" }]} dark />
           <div className="mt-8 max-w-2xl">
-            <h1 className="font-serif text-4xl sm:text-5xl text-brand-cream-light font-light mb-5">
+            <span className="text-xs font-bold text-pink-300 tracking-widest uppercase">
+              REZERVASYON VE DESTEK
+            </span>
+            <h1 className="text-4xl sm:text-5xl font-black mt-2 mb-4 leading-tight">
               İletişim
             </h1>
-            <p className="text-brand-cream/60 leading-relaxed text-lg">
-              Randevu, fiyat ve müsaitlik bilgisi için bize ulaşın.
+            <p className="text-white/70 leading-relaxed text-base sm:text-lg">
+              Randevu, fiyat ve müsaitlik bilgisi için bize WhatsApp üzerinden veya telefonla dilediğiniz an ulaşabilirsiniz.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-brand-cream-light">
+      <section className="py-20 bg-[#fcf8f9]">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-14">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Info */}
-            <div>
-              <div className="flex items-center gap-3 mb-7">
-                <div className="w-8 h-px bg-brand-gold" />
-                <span className="text-xs text-brand-gold tracking-[0.25em] uppercase">Bilgiler</span>
+            <div className="space-y-8">
+              <div>
+                <span className="text-xs font-bold text-primary tracking-widest uppercase">BİLGİLER</span>
+                <h2 className="text-2xl sm:text-3xl font-black text-gray-900 mt-1 mb-4">
+                  Bize Kolayca Ulaşın
+                </h2>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Günün her anında WhatsApp veya telefon ile doğrudan iletişime geçebilirsiniz.
+                </p>
               </div>
 
-              <div className="space-y-6 mb-10">
+              <div className="space-y-4">
                 {[
-                  { label: "İşletme Adı", value: siteConfig.brandName },
-                  { label: "Adres", value: siteConfig.address.full },
+                  { label: "İşletme", value: siteConfig.brandName },
+                  { label: "Bölge", value: siteConfig.address.full },
                   { label: "Telefon", value: siteConfig.phone, href: siteConfig.phoneTel },
-                  { label: "WhatsApp", value: siteConfig.whatsapp, href: whatsappHref, external: true },
-                  { label: "E-posta", value: siteConfig.email, href: siteConfig.emailHref },
+                  {
+                    label: "WhatsApp",
+                    value: siteConfig.whatsapp,
+                    href: `${siteConfig.whatsappUrl}?text=${encodeURIComponent(siteConfig.whatsappDefaultMessage)}`,
+                    external: true,
+                  },
                   { label: "Çalışma Saatleri", value: siteConfig.workingHours.full },
-                  { label: "Hizmet Bölgesi", value: siteConfig.address.serviceArea },
                 ].map((item, i) => (
-                  <div key={i} className="flex gap-5 py-4 border-b border-brand-text/8">
-                    <span className="text-xs text-brand-gold uppercase tracking-wider w-36 flex-shrink-0 pt-0.5">
-                      {item.label}
-                    </span>
+                  <div key={i} className="flex justify-between items-center py-4 border-b border-gray-200">
+                    <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">{item.label}</span>
                     {item.href ? (
                       <a
                         href={item.href}
                         target={item.external ? "_blank" : undefined}
                         rel={item.external ? "noopener noreferrer" : undefined}
-                        className="text-brand-text-secondary hover:text-brand-text transition-colors text-sm break-all"
+                        className="text-sm font-bold text-primary hover:underline"
                       >
                         {item.value}
                       </a>
                     ) : (
-                      <span className="text-brand-text-secondary text-sm">{item.value}</span>
+                      <span className="text-sm font-semibold text-gray-800">{item.value}</span>
                     )}
                   </div>
                 ))}
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3">
-                <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-brand-gold text-brand-dark font-medium px-7 py-4 text-sm hover:bg-brand-gold-light transition-colors"
-                  onClick={() => {
-                    if (typeof window !== "undefined" && (window as any).dataLayer) {
-                      (window as any).dataLayer.push({ event: "whatsapp_click", location: "contact_page" });
-                    }
-                  }}
-                >
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <div className="flex flex-wrap gap-4 pt-4">
+                <WhatsAppCTA location="contact_page" variant="primary" className="h-14 px-8 text-base">
                   WhatsApp&apos;tan Randevu Al
-                </a>
-                <a
-                  href={siteConfig.phoneTel}
-                  className="inline-flex items-center justify-center gap-2 border border-brand-gold/40 text-brand-gold font-medium px-7 py-4 text-sm hover:bg-brand-gold/10 transition-colors"
-                >
-                  Hemen Ara
-                </a>
+                </WhatsAppCTA>
+                <PhoneCTA location="contact_page" variant="outline-dark" className="h-14 px-6 text-sm">
+                  Hemen Ara: {siteConfig.phone}
+                </PhoneCTA>
               </div>
             </div>
 
             {/* Form */}
-            <div>
-              <div className="flex items-center gap-3 mb-7">
-                <div className="w-8 h-px bg-brand-gold" />
-                <span className="text-xs text-brand-gold tracking-[0.25em] uppercase">Randevu Formu</span>
-              </div>
+            <div className="bg-white p-8 sm:p-10 rounded-2xl shadow-sm border border-gray-100">
+              <span className="text-xs font-bold text-primary tracking-widest uppercase">HIZLI TALEP</span>
+              <h3 className="text-2xl font-black text-gray-900 mt-1 mb-6">
+                Randevu & Bilgi Formu
+              </h3>
 
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-brand-text mb-2">
-                    Adınız <span className="text-brand-gold">*</span>
+                  <label htmlFor="name" className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">
+                    Adınız Soyadınız *
                   </label>
                   <input
-                    id="name" name="name" type="text" required
-                    value={formData.name} onChange={handleChange}
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
                     placeholder="Adınızı girin"
-                    className="w-full bg-white border border-brand-text/15 px-4 py-3 text-brand-text placeholder-brand-text-secondary/50 focus:outline-none focus:border-brand-gold transition-colors"
-                    style={{ fontSize: "16px" }}
-                    onClick={() => {
-                      if (typeof window !== "undefined" && (window as any).dataLayer) {
-                        (window as any).dataLayer.push({ event: "contact_form_start" });
-                      }
-                    }}
+                    className="w-full bg-[#fcf8f9] border border-gray-200 rounded-xl px-4 py-3.5 text-sm text-gray-900 focus:outline-none focus:border-primary transition-all"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-brand-text mb-2">Telefon</label>
+                  <label htmlFor="phone" className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">
+                    Telefon Numaranız
+                  </label>
                   <input
-                    id="phone" name="phone" type="tel"
-                    value={formData.phone} onChange={handleChange}
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
                     placeholder="05xx xxx xx xx"
-                    className="w-full bg-white border border-brand-text/15 px-4 py-3 text-brand-text placeholder-brand-text-secondary/50 focus:outline-none focus:border-brand-gold transition-colors"
-                    style={{ fontSize: "16px" }}
+                    className="w-full bg-[#fcf8f9] border border-gray-200 rounded-xl px-4 py-3.5 text-sm text-gray-900 focus:outline-none focus:border-primary transition-all"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-brand-text mb-2">İlgilendiğiniz Hizmet</label>
+                  <label htmlFor="service" className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">
+                    İlgilendiğiniz Masaj Türü
+                  </label>
                   <select
-                    id="service" name="service"
-                    value={formData.service} onChange={handleChange}
-                    className="w-full bg-white border border-brand-text/15 px-4 py-3 text-brand-text focus:outline-none focus:border-brand-gold transition-colors"
-                    style={{ fontSize: "16px" }}
+                    id="service"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    className="w-full bg-[#fcf8f9] border border-gray-200 rounded-xl px-4 py-3.5 text-sm text-gray-900 focus:outline-none focus:border-primary transition-all"
                   >
-                    <option value="">Masaj türü seçin</option>
+                    <option value="">Seçiniz</option>
                     {services.map((s) => (
                       <option key={s.slug} value={s.name}>{s.name}</option>
                     ))}
-                    <option value="Bilmiyorum / Danışmak istiyorum">Bilmiyorum / Danışmak istiyorum</option>
+                    <option value="Tavsiye İstiyorum">Tavsiye İstiyorum</option>
                   </select>
                 </div>
 
                 <div>
-                  <label htmlFor="preferredTime" className="block text-sm font-medium text-brand-text mb-2">Tercih Edilen Saat</label>
+                  <label htmlFor="preferredTime" className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">
+                    Tercih Edilen Saat
+                  </label>
                   <input
-                    id="preferredTime" name="preferredTime" type="text"
-                    value={formData.preferredTime} onChange={handleChange}
-                    placeholder="Örn: Bu akşam 20:00"
-                    className="w-full bg-white border border-brand-text/15 px-4 py-3 text-brand-text placeholder-brand-text-secondary/50 focus:outline-none focus:border-brand-gold transition-colors"
-                    style={{ fontSize: "16px" }}
+                    id="preferredTime"
+                    name="preferredTime"
+                    type="text"
+                    value={formData.preferredTime}
+                    onChange={handleChange}
+                    placeholder="Örn: Bugün 20:00"
+                    className="w-full bg-[#fcf8f9] border border-gray-200 rounded-xl px-4 py-3.5 text-sm text-gray-900 focus:outline-none focus:border-primary transition-all"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="note" className="block text-sm font-medium text-brand-text mb-2">Not</label>
+                  <label htmlFor="note" className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">
+                    Ek Notunuz
+                  </label>
                   <textarea
-                    id="note" name="note" rows={4}
-                    value={formData.note} onChange={handleChange}
-                    placeholder="Eklemek istediğiniz notlar..."
-                    className="w-full bg-white border border-brand-text/15 px-4 py-3 text-brand-text placeholder-brand-text-secondary/50 focus:outline-none focus:border-brand-gold transition-colors resize-none"
-                    style={{ fontSize: "16px" }}
+                    id="note"
+                    name="note"
+                    rows={3}
+                    value={formData.note}
+                    onChange={handleChange}
+                    placeholder="Belirtmek istediğiniz özel bir durum..."
+                    className="w-full bg-[#fcf8f9] border border-gray-200 rounded-xl px-4 py-3.5 text-sm text-gray-900 focus:outline-none focus:border-primary transition-all resize-none"
                   />
                 </div>
 
-                <p className="text-xs text-brand-text-secondary leading-relaxed">
-                  Formu göndererek WhatsApp&apos;a yönlendirileceksiniz. Form bilgileriniz otomatik olarak mesaj haline getirilir.
+                <p className="text-xs text-gray-500">
+                  * Formu gönderdiğinizde bilgileriniz otomatik olarak WhatsApp mesajına dönüştürülüp açılacaktır.
                 </p>
 
                 <button
                   type="submit"
-                  className="w-full bg-brand-gold text-brand-dark font-medium py-4 text-sm tracking-wide hover:bg-brand-gold-light transition-colors flex items-center justify-center gap-2"
+                  className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-xl text-sm tracking-wide shadow-lg shadow-primary/25 transition-all flex items-center justify-center gap-2"
                 >
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                  WhatsApp&apos;tan Gönder
+                  WhatsApp ile Gönder
                 </button>
               </form>
             </div>

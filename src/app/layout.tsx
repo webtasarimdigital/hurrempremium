@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/siteConfig";
 import Header from "@/components/Header";
@@ -8,18 +8,11 @@ import MobileBottomNav from "@/components/MobileBottomNav";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { SchemaOrg } from "@/components/SchemaOrg";
 
-const cormorant = Cormorant_Garamond({
+const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant",
+  variable: "--font-manrope",
   display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -30,17 +23,22 @@ export const metadata: Metadata = {
   },
   description: siteConfig.seo.defaultDescription,
   keywords: [
-    "Denizli evde masaj",
     "Denizli masaj",
+    "Denizli masaj salonu",
     "Denizli masaj hizmeti",
-    "Denizli eve masaj",
-    "evde masaj Denizli",
+    "Denizli VIP masaj",
     "Hürrem Premium",
     "Asmalıevler masaj",
     "Denizli profesyonel masaj",
+    "Denizli spa terapi",
   ],
   authors: [{ name: "Hürrem Premium" }],
   creator: "Hürrem Premium",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/favicon.ico",
+    apple: "/icon.svg",
+  },
   openGraph: {
     type: "website",
     locale: "tr_TR",
@@ -73,8 +71,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr" className={`${cormorant.variable} ${inter.variable}`}>
-      <body className="font-sans">
+    <html lang="tr" className={manrope.variable}>
+      <body className="font-sans antialiased bg-[#fcf8f9] text-[#1b0d12]">
         <SchemaOrg />
         <Header />
         <main className="mobile-content-padding">{children}</main>

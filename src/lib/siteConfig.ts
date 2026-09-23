@@ -1,8 +1,8 @@
 export const siteConfig = {
   brandName: "Hürrem Premium",
-  tagline: "Denizli'de Premium Evde Masaj Deneyimi",
+  tagline: "Denizli'de Premium Masaj & Spa Deneyimi",
   description:
-    "Denizli'de evde masaj hizmeti için Hürrem Premium ile iletişime geçin. Masaj seçenekleri, müsaitlik ve randevu için WhatsApp'tan bilgi alın.",
+    "Denizli'de profesyonel masaj ve spa terapileri için Hürrem Premium ile iletişime geçin. Masaj seçenekleri, müsaitlik ve randevu için WhatsApp'tan bilgi alın.",
   url: "https://hurrempremium.com",
 
   phone: "0552 122 39 98",
@@ -13,7 +13,7 @@ export const siteConfig = {
   whatsappNumber: "905521223998",
   whatsappUrl: "https://wa.me/905521223998",
   whatsappDefaultMessage:
-    "Merhaba Hürrem Premium, Denizli evde masaj hizmetiniz hakkında bilgi almak ve randevu oluşturmak istiyorum.",
+    "Merhaba Hürrem Premium, Denizli masaj hizmetiniz hakkında bilgi almak ve randevu oluşturmak istiyorum.",
 
   email: "premiumhurrem@gmail.com",
   emailHref: "mailto:premiumhurrem@gmail.com",
@@ -37,9 +37,9 @@ export const siteConfig = {
 
   seo: {
     titleTemplate: "%s | Hürrem Premium",
-    defaultTitle: "Denizli Evde Masaj | Hürrem Premium",
+    defaultTitle: "Denizli Masaj & VIP Spa Terapileri | Hürrem Premium",
     defaultDescription:
-      "Denizli'de evde masaj hizmeti için Hürrem Premium ile iletişime geçin. Masaj seçenekleri, müsaitlik ve randevu için WhatsApp'tan bilgi alın.",
+      "Denizli'de seçkin masaj ve spa deneyimi için Hürrem Premium. Masaj seçenekleri, özel seanslar, müsaitlik ve randevu için WhatsApp'tan hemen bilgi alın.",
   },
 } as const;
 
