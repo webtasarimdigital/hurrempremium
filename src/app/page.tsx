@@ -119,7 +119,7 @@ export default function HomePage() {
   return (
     <>
       {/* ── 1. MODERN HERO SECTION (Perfect Mobile Fit & Vibrant Spa Ambience) ── */}
-      <section className="relative min-h-[calc(100dvh-64px)] md:min-h-[620px] flex flex-col justify-between bg-[#1b0d12] overflow-hidden pt-20 pb-5 md:py-24">
+      <section className="relative min-h-[calc(100dvh-64px)] md:min-h-[620px] flex flex-col justify-between bg-[#0c0c0e] overflow-hidden pt-20 pb-5 md:py-24">
         {/* Vibrant Background Image - Relaxing Spa Therapy with warm candles */}
         <div
           className="absolute inset-0 bg-cover bg-center opacity-60 scale-105 transition-transform duration-1000"
@@ -130,7 +130,7 @@ export default function HomePage() {
           aria-label="Hürrem Premium Masaj & Spa"
         />
         {/* Warm Ambient Vignette & Color Gradients */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1b0d12] via-[#1b0d12]/55 to-[#1b0d12]/75" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0e] via-[#0c0c0e]/50 to-[#0c0c0e]/75" />
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 sm:w-96 h-72 sm:h-96 bg-primary/25 rounded-full blur-[100px] pointer-events-none" />
         <div className="absolute bottom-16 right-10 w-60 h-60 bg-amber-500/20 rounded-full blur-[90px] pointer-events-none" />
 
@@ -278,7 +278,7 @@ export default function HomePage() {
       </section>
 
       {/* ── 4. WHY CHOOSE US ── */}
-      <section className="py-16 md:py-20 bg-[#1b0d12] text-white">
+      <section className="py-16 md:py-20 bg-[#0c0c0e] text-white">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
@@ -389,7 +389,7 @@ export default function HomePage() {
       </section>
 
       {/* ── 8. FINAL CTA SECTION ── */}
-      <section className="py-20 bg-gradient-to-br from-[#1b0d12] via-[#2d111c] to-[#1b0d12] text-white text-center">
+      <section className="py-20 bg-gradient-to-br from-[#0c0c0e] via-[#1a0c12] to-[#0c0c0e] text-white text-center">
         <div className="container-custom max-w-2xl mx-auto px-4">
           <span className="px-4 py-1.5 rounded-full bg-primary/20 text-pink-300 text-xs font-bold tracking-widest uppercase inline-block mb-4">
             REZERVASYON VE BİLGİ
