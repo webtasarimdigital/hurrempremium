@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-dark: #241813;
+  --color-brand-brown: #35251D;
+  --color-brand-gold: #C3A36B;
+  --color-brand-gold-light: #D9BD8B;
+  --color-brand-cream: #F5EFE7;
+  --color-brand-cream-light: #FBF8F3;
+  --color-brand-text: #201C1A;
+  --color-brand-text-secondary: #766D66;
+
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-brand-text);
+  background-color: var(--color-brand-cream-light);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Safe area for iOS */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-brand-gold);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-brand-gold);
+  color: #fff;
+}
+
+/* Prevent horizontal overflow */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Typography defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  line-height: 1.2;
+}
+
+/* Smooth accordion animation */
+details summary {
+  cursor: pointer;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-gold);
+  border-radius: 3px;
+}
+
+/* Hero gradient overlay */
+.hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(36, 24, 19, 0.75) 0%,
+    rgba(36, 24, 19, 0.55) 50%,
+    rgba(36, 24, 19, 0.80) 100%
+  );
+}
+
+/* Gold divider */
+.gold-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--color-brand-gold);
+}
+
+/* Section padding */
+.section-padding {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+
+/* Container */
+.container-custom {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 640px) {
+  .container-custom {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* Mobile bottom nav padding */
+.mobile-content-padding {
+  padding-bottom: 72px;
+}
+
+@media (min-width: 768px) {
+  .mobile-content-padding {
+    padding-bottom: 0;
+  }
+}
