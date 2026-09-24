@@ -11,12 +11,20 @@ export default function MobileBottomNav() {
   const isServicesActive = pathname?.startsWith("/hizmetler");
   const isContactActive = pathname?.startsWith("/iletisim");
 
+  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="md:hidden fixed bottom-0 left-0 right-0 z-[200] bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-[0_-5px_25px_rgba(0,0,0,0.08)] safe-bottom">
       <div className="flex items-center justify-between h-16 px-1">
         {/* 1. SOL 1: Ana Sayfa */}
         <Link
           href="/"
+          onClick={handleHomeClick}
           className={`flex-1 h-full flex flex-col items-center justify-center transition-all gap-1 ${
             isHomeActive
               ? "text-primary font-black"

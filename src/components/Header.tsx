@@ -2,14 +2,23 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { siteConfig } from "@/lib/siteConfig";
 import { services } from "@/lib/services";
 import Logo from "./Logo";
 
 export default function Header() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+
+  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,7 +50,7 @@ export default function Header() {
       >
         <div className="container-custom flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center group" aria-label="Hürrem Premium Ana Sayfa">
+          <Link href="/" onClick={handleHomeClick} className="flex items-center group" aria-label="Hürrem Premium Ana Sayfa">
             <Logo variant={isScrolled ? "dark" : "light"} height={38} />
           </Link>
 
@@ -49,6 +58,7 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-7 lg:gap-8" aria-label="Ana Menü">
             <Link
               href="/"
+              onClick={handleHomeClick}
               className={`text-sm font-semibold transition-colors duration-200 tracking-wide ${
                 isScrolled ? "text-gray-800 hover:text-primary" : "text-white/90 hover:text-pink-300"
               }`}
@@ -182,7 +192,10 @@ export default function Header() {
           <nav className="flex flex-col gap-2" aria-label="Mobil Menü">
             <Link
               href="/"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={(e) => {
+                setMobileMenuOpen(false);
+                handleHomeClick(e);
+              }}
               className="py-3 text-2xl font-bold text-white border-b border-white/10 hover:text-pink-300 transition-colors"
             >
               Ana Sayfa
