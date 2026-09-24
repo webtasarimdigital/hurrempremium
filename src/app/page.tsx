@@ -138,11 +138,11 @@ export default function HomePage() {
         <div className="relative z-10 container-custom text-center max-w-3xl mx-auto px-4 flex-1 flex flex-col justify-around py-4 sm:py-8">
           {/* Top Title Group */}
           <div className="flex flex-col items-center">
-            {/* Eyebrow badge */}
+            {/* Eyebrow badge - Exact Location */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 mb-4 sm:mb-6 shadow-lg">
               <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
               <span className="text-[11px] sm:text-xs font-bold text-pink-200 tracking-wider uppercase">
-                Denizli • VIP Masaj Terapileri
+                📍 Denizli / Asmalıevler Masaj Hizmeti
               </span>
             </div>
 
@@ -182,10 +182,10 @@ export default function HomePage() {
         <div className="relative z-10 container-custom text-center px-4 pt-2 pb-2">
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs font-semibold text-white/90 mb-3">
             <span className="px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center gap-1.5 shadow-sm whitespace-nowrap">
-              <span className="text-amber-400">🕐</span> 12:00 – 00:00 Her Gün
+              <span className="text-pink-300">📍</span> Asmalıevler, Denizli
             </span>
             <span className="px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center gap-1.5 shadow-sm whitespace-nowrap">
-              <span className="text-pink-300">💆</span> 8+ Masaj Türü
+              <span className="text-amber-400">🕐</span> 12:00 – 00:00 Her Gün
             </span>
             <span className="px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center gap-1.5 shadow-sm whitespace-nowrap">
               <span className="text-green-400">✨</span> VIP &amp; Hijyenik Seanslar
