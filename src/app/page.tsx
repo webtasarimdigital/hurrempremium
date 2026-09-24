@@ -150,7 +150,7 @@ export default function HomePage() {
             <h1 className="text-white text-3xl sm:text-5xl lg:text-6xl font-black leading-[1.2] tracking-tight drop-shadow-md mb-3 sm:mb-5">
               Denizli&apos;de Eşsiz <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 via-rose-200 to-amber-200 drop-shadow">
-                Rahatlamayı
+                Masajı
               </span>{" "}
               Deneyimleyin
             </h1>
