@@ -35,9 +35,12 @@ export const metadata: Metadata = {
   authors: [{ name: "Hürrem Premium" }],
   creator: "Hürrem Premium",
   icons: {
-    icon: "/icon.svg",
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
     shortcut: "/favicon.ico",
-    apple: "/icon.svg",
+    apple: "/icon.png",
   },
   openGraph: {
     type: "website",
