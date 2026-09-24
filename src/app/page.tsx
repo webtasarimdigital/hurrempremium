@@ -138,11 +138,11 @@ export default function HomePage() {
         <div className="relative z-10 container-custom text-center max-w-3xl mx-auto px-4 flex-1 flex flex-col justify-around py-4 sm:py-8">
           {/* Top Title Group */}
           <div className="flex flex-col items-center">
-            {/* Eyebrow badge - Exact Location */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 mb-4 sm:mb-6 shadow-lg">
-              <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
-              <span className="text-[11px] sm:text-xs font-bold text-pink-200 tracking-wider uppercase">
-                📍 Denizli / Asmalıevler Masaj Hizmeti
+            {/* Eyebrow badge - Prominent Location */}
+            <div className="inline-flex items-center gap-2.5 px-5 py-2 sm:px-6 sm:py-2.5 rounded-full bg-black/75 backdrop-blur-md border border-pink-500/40 mb-4 sm:mb-6 shadow-xl shadow-pink-950/30">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#25D366] animate-pulse shrink-0" />
+              <span className="text-sm sm:text-base md:text-lg font-black tracking-wide text-white">
+                📍 <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 via-rose-200 to-amber-200 font-black text-base sm:text-lg md:text-xl">Asmalıevler</span> Masaj Hizmeti
               </span>
             </div>
 
