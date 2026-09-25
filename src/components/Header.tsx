@@ -67,17 +67,23 @@ export default function Header() {
             </Link>
 
             {/* Services dropdown */}
-            <div className="relative group">
+            <div
+              className="relative py-2"
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+            >
               <button
-                className={`text-sm font-semibold transition-colors duration-200 tracking-wide flex items-center gap-1.5 ${
+                type="button"
+                className={`text-sm font-semibold transition-colors duration-200 tracking-wide flex items-center gap-1.5 cursor-pointer ${
                   isScrolled ? "text-gray-800 hover:text-primary" : "text-white/90 hover:text-pink-300"
                 }`}
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
+                onClick={() => setServicesOpen((prev) => !prev)}
               >
-                Hizmetler
+                <span>Hizmetler</span>
                 <svg
-                  className="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180 opacity-70"
+                  className={`w-3.5 h-3.5 transition-transform duration-200 opacity-70 ${
+                    servicesOpen ? "rotate-180 text-primary" : ""
+                  }`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -86,14 +92,18 @@ export default function Header() {
                 </svg>
               </button>
 
-              {servicesOpen && (
-                <div
-                  className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white border border-gray-100 rounded-2xl shadow-2xl py-3 z-50"
-                  onMouseEnter={() => setServicesOpen(true)}
-                  onMouseLeave={() => setServicesOpen(false)}
-                >
+              {/* Dropdown Menu with seamless hover bridge */}
+              <div
+                className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 w-64 z-50 transition-all duration-200 ${
+                  servicesOpen
+                    ? "opacity-100 visible translate-y-0 pointer-events-auto"
+                    : "opacity-0 invisible -translate-y-2 pointer-events-none"
+                }`}
+              >
+                <div className="bg-white border border-gray-100 rounded-2xl shadow-2xl py-3 overflow-hidden">
                   <Link
                     href="/hizmetler"
+                    onClick={() => setServicesOpen(false)}
                     className="block px-4 py-2 text-xs font-bold uppercase tracking-wider text-primary hover:bg-pink-50 transition-colors"
                   >
                     Tüm Hizmetler →
@@ -103,13 +113,14 @@ export default function Header() {
                     <Link
                       key={s.slug}
                       href={`/hizmetler/${s.slug}`}
+                      onClick={() => setServicesOpen(false)}
                       className="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-pink-50/60 hover:pl-5 transition-all"
                     >
                       {s.name}
                     </Link>
                   ))}
                 </div>
-              )}
+              </div>
             </div>
 
             <Link
