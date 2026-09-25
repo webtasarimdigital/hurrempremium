@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { siteConfig } from "@/lib/siteConfig";
 import Header from "@/components/Header";
@@ -75,6 +76,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" className={manrope.variable}>
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18473635061"
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag-aw-18473635061" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-18473635061');
+          `}
+        </Script>
+      </head>
       <body className="font-sans antialiased bg-[#fcf8f9] text-[#1b0d12]">
         <SchemaOrg />
         <Header />
